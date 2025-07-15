@@ -3,3 +3,5 @@ function Question(){
     <p>Question</p>
   )
 }
+
+export default Question
