@@ -1,0 +1,112 @@
+[
+  {
+    "id": "q1",
+    "questionText": "What is the capital city of Australia?",
+    "answerOptions": [
+      { "id": "a", "text": "Sydney", "isCorrect": false },
+      { "id": "b", "text": "Melbourne", "isCorrect": false },
+      { "id": "c", "text": "Canberra", "isCorrect": true },
+      { "id": "d", "text": "Brisbane", "isCorrect": false }
+    ],
+    "category": "Geography"
+  },
+  {
+    "id": "q2",
+    "questionText": "Which planet is known as the 'Red Planet'?",
+    "answerOptions": [
+      { "id": "a", "text": "Earth", "isCorrect": false },
+      { "id": "b", "text": "Mars", "isCorrect": true },
+      { "id": "c", "text": "Jupiter", "isCorrect": false },
+      { "d": "Venus", "text": "Venus", "isCorrect": false }
+    ],
+    "category": "Science"
+  },
+  {
+    "id": "q3",
+    "questionText": "Who painted the Mona Lisa?",
+    "answerOptions": [
+      { "id": "a", "text": "Vincent van Gogh", "isCorrect": false },
+      { "id": "b", "text": "Pablo Picasso", "isCorrect": false },
+      { "id": "c", "text": "Leonardo da Vinci", "isCorrect": true },
+      { "d": "Claude Monet", "text": "Claude Monet", "isCorrect": false }
+    ],
+    "category": "Art"
+  },
+  {
+    "id": "q4",
+    "questionText": "What is the largest ocean on Earth?",
+    "answerOptions": [
+      { "id": "a", "text": "Atlantic Ocean", "isCorrect": false },
+      { "id": "b", "text": "Indian Ocean", "isCorrect": false },
+      { "id": "c", "text": "Arctic Ocean", "isCorrect": false },
+      { "d": "Pacific Ocean", "text": "Pacific Ocean", "isCorrect": true }
+    ],
+    "category": "Geography"
+  },
+  {
+    "id": "q5",
+    "questionText": "What is the chemical symbol for water?",
+    "answerOptions": [
+      { "id": "a", "text": "O2", "isCorrect": false },
+      { "id": "b", "text": "H2O", "isCorrect": true },
+      { "id": "c", "text": "CO2", "isCorrect": false },
+      { "d": "NaCl", "text": "NaCl", "isCorrect": false }
+    ],
+    "category": "Science"
+  },
+  {
+    "id": "q6",
+    "questionText": "In which year did the first man walk on the moon?",
+    "answerOptions": [
+      { "id": "a", "text": "1965", "isCorrect": false },
+      { "id": "b", "text": "1969", "isCorrect": true },
+      { "c": "1971", "text": "1971", "isCorrect": false },
+      { "d": "1975", "text": "1975", "isCorrect": false }
+    ],
+    "category": "History"
+  },
+  {
+    "id": "q7",
+    "questionText": "Which instrument has black and white keys?",
+    "answerOptions": [
+      { "id": "a", "text": "Guitar", "isCorrect": false },
+      { "id": "b", "text": "Drums", "isCorrect": false },
+      { "id": "c", "text": "Piano", "isCorrect": true },
+      { "d": "Violin", "text": "Violin", "isCorrect": false }
+    ],
+    "category": "Music"
+  },
+  {
+    "id": "q8",
+    "questionText": "What is the main ingredient in guacamole?",
+    "answerOptions": [
+      { "id": "a", "text": "Tomato", "isCorrect": false },
+      { "id": "b", "text": "Onion", "isCorrect": false },
+      { "c": "Avocado", "text": "Avocado", "isCorrect": true },
+      { "d": "Lime", "text": "Lime", "isCorrect": false }
+    ],
+    "category": "Food"
+  },
+  {
+    "id": "q9",
+    "questionText": "Who wrote the play 'Romeo and Juliet'?",
+    "answerOptions": [
+      { "id": "a", "text": "Charles Dickens", "isCorrect": false },
+      { "id": "b", "text": "Jane Austen", "isCorrect": false },
+      { "id": "c", "text": "William Shakespeare", "isCorrect": true },
+      { "d": "Mark Twain", "text": "Mark Twain", "isCorrect": false }
+    ],
+    "category": "Literature"
+  },
+  {
+    "id": "q10",
+    "questionText": "What is the fastest land animal?",
+    "answerOptions": [
+      { "id": "a", "text": "Lion", "isCorrect": false },
+      { "b": "Cheetah", "text": "Cheetah", "isCorrect": true },
+      { "id": "c", "text": "Gazelle", "isCorrect": false },
+      { "d": "Horse", "text": "Horse", "isCorrect": false }
+    ],
+    "category": "Animals"
+  }
+]
