@@ -62,11 +62,11 @@ function Home(props){
         </article>
         <article className="flex flex-col">
           <h2 className="text-2xl text-slate-800 font-bold text-center">Challenge Yourself Today</h2>
-          <div className="flex gap-3 justify-center py-6">
-            <p className="bg-white text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">5 Questions</p>
-            <p className="bg-white text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Multiple Choice</p>
-            <p className="bg-white text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Instant Results</p>
-            <p className="bg-white text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Answer Review</p>
+          <div className="flex sm:flex-row flex-col gap-3 justify-center py-6">
+            <p className="bg-white text-center text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">5 Questions</p>
+            <p className="bg-white text-center text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Multiple Choice</p>
+            <p className="bg-white text-center text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Instant Results</p>
+            <p className="bg-white text-center text-slate-950 rounded-l-full rounded-r-full px-4 py-2 shadow-md">Answer Review</p>
           </div>
         </article>
       </section>
