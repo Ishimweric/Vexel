@@ -6,6 +6,8 @@ import Question from "../components/Question";
 function Quiz(){
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion= quizQuestionsData[currentQuestionIndex];
+  const [isClicked, setIsClicked] = useState(false);
+  const [selectedAnswerId, setSelectedAnswerId] = useState(null);
 
   const totalQuestions = quizQuestionsData.length;
 
@@ -15,6 +17,14 @@ function Quiz(){
   function updateQuestion(){
     // console.log("clicked")
     setCurrentQuestionIndex((prevQuestionIndex)=> prevQuestionIndex + 1);
+  }
+
+  function handleIsClicked(){
+    setIsClicked((prevValue) => !prevValue);
+  }
+
+  function handleIsSelected(selectedId){
+    setSelectedAnswerId(selectedId);
   }
 
   return (
@@ -31,6 +41,8 @@ function Quiz(){
         <Question
           question = {question}
           answers = {answers}
+          handleIsSelected = {handleIsSelected}
+          selectedAnswerId = {selectedAnswerId}
         />
         <section className="grid place-content-center pt-6">
           <button className="px-5 py-2 text-xl font-bold text-white bg-gradient-to-r from-blue-600 to-violet-600 rounded-l-full rounded-r-full hover:from-blue-700 hover:to-violet-700 transition-all duration-200" onClick={updateQuestion}>Select Answer</button>
