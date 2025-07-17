@@ -1,5 +1,6 @@
 import { useState } from "react"
 import quizQuestionsData from "../data/questions.json"
+import ProgressBar from "../components/ProgressBar";
 
 function Quiz(){
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,9 +13,12 @@ function Quiz(){
       <div className="w-2/3 py-2">
         <section className="flex justify-between py-1">
           <p className="text-slate-950 text-2xl font-bold">Question {currentQuestionIndex + 1} of {totalQuestions}</p>
-          <p className="text-green-800 text-2xl font-bold">30s</p>
+          <p className="text-green-500 text-2xl font-bold">30s</p>
         </section>
-        <section></section>
+        <ProgressBar
+          currentQuestionIndex = {currentQuestionIndex}
+          totalQuestions = {totalQuestions}
+        />
         <section></section>
         <section></section>
       </div>
