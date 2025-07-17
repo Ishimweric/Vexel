@@ -26,7 +26,9 @@ function Quiz(){
           question = {question}
           answers = {answers}
         />
-        <section></section>
+        <section className="grid place-content-center pt-6">
+          <button className="px-5 py-2 text-xl font-bold text-white bg-gradient-to-r from-blue-600 to-violet-600 rounded-l-full rounded-r-full hover:from-blue-700 hover:to-violet-700 transition-all duration-200">Select Answer</button>
+        </section>
       </div>
     </main>
   )
