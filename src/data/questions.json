@@ -17,7 +17,7 @@
       { "id": "a", "text": "Earth", "isCorrect": false },
       { "id": "b", "text": "Mars", "isCorrect": true },
       { "id": "c", "text": "Jupiter", "isCorrect": false },
-      { "d": "Venus", "text": "Venus", "isCorrect": false }
+      { "id": "d", "text": "Venus", "isCorrect": false }
     ],
     "category": "Science"
   },
@@ -28,7 +28,7 @@
       { "id": "a", "text": "Vincent van Gogh", "isCorrect": false },
       { "id": "b", "text": "Pablo Picasso", "isCorrect": false },
       { "id": "c", "text": "Leonardo da Vinci", "isCorrect": true },
-      { "d": "Claude Monet", "text": "Claude Monet", "isCorrect": false }
+      { "id": "d", "text": "Claude Monet", "isCorrect": false }
     ],
     "category": "Art"
   },
@@ -39,7 +39,7 @@
       { "id": "a", "text": "Atlantic Ocean", "isCorrect": false },
       { "id": "b", "text": "Indian Ocean", "isCorrect": false },
       { "id": "c", "text": "Arctic Ocean", "isCorrect": false },
-      { "d": "Pacific Ocean", "text": "Pacific Ocean", "isCorrect": true }
+      { "id": "d", "text": "Pacific Ocean", "isCorrect": true }
     ],
     "category": "Geography"
   },
@@ -50,7 +50,7 @@
       { "id": "a", "text": "O2", "isCorrect": false },
       { "id": "b", "text": "H2O", "isCorrect": true },
       { "id": "c", "text": "CO2", "isCorrect": false },
-      { "d": "NaCl", "text": "NaCl", "isCorrect": false }
+      { "id": "d", "text": "NaCl", "isCorrect": false }
     ],
     "category": "Science"
   },
@@ -60,8 +60,8 @@
     "answerOptions": [
       { "id": "a", "text": "1965", "isCorrect": false },
       { "id": "b", "text": "1969", "isCorrect": true },
-      { "c": "1971", "text": "1971", "isCorrect": false },
-      { "d": "1975", "text": "1975", "isCorrect": false }
+      { "id": "c", "text": "1971", "isCorrect": false },
+      { "id": "d", "text": "1975", "isCorrect": false }
     ],
     "category": "History"
   },
@@ -72,7 +72,7 @@
       { "id": "a", "text": "Guitar", "isCorrect": false },
       { "id": "b", "text": "Drums", "isCorrect": false },
       { "id": "c", "text": "Piano", "isCorrect": true },
-      { "d": "Violin", "text": "Violin", "isCorrect": false }
+      { "id": "d", "text": "Violin", "isCorrect": false }
     ],
     "category": "Music"
   },
@@ -82,8 +82,8 @@
     "answerOptions": [
       { "id": "a", "text": "Tomato", "isCorrect": false },
       { "id": "b", "text": "Onion", "isCorrect": false },
-      { "c": "Avocado", "text": "Avocado", "isCorrect": true },
-      { "d": "Lime", "text": "Lime", "isCorrect": false }
+      { "id": "c", "text": "Avocado", "isCorrect": true },
+      { "id": "d", "text": "Lime", "isCorrect": false }
     ],
     "category": "Food"
   },
@@ -94,7 +94,7 @@
       { "id": "a", "text": "Charles Dickens", "isCorrect": false },
       { "id": "b", "text": "Jane Austen", "isCorrect": false },
       { "id": "c", "text": "William Shakespeare", "isCorrect": true },
-      { "d": "Mark Twain", "text": "Mark Twain", "isCorrect": false }
+      { "id": "d", "text": "Mark Twain", "isCorrect": false }
     ],
     "category": "Literature"
   },
@@ -103,9 +103,9 @@
     "questionText": "What is the fastest land animal?",
     "answerOptions": [
       { "id": "a", "text": "Lion", "isCorrect": false },
-      { "b": "Cheetah", "text": "Cheetah", "isCorrect": true },
+      { "id": "b", "text": "Cheetah", "isCorrect": true },
       { "id": "c", "text": "Gazelle", "isCorrect": false },
-      { "d": "Horse", "text": "Horse", "isCorrect": false }
+      { "id": "d", "text": "Horse", "isCorrect": false }
     ],
     "category": "Animals"
   }
