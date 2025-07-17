@@ -5,15 +5,16 @@ import Question from "../components/Question";
 
 function Quiz(){
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(quizQuestionsData[currentQuestionIndex]);
+  const currentQuestion= quizQuestionsData[currentQuestionIndex];
+
   const totalQuestions = quizQuestionsData.length;
+
   const question = currentQuestion.questionText;
   const answers = currentQuestion.answerOptions;
-  // console.log(answers)
 
   function updateQuestion(){
-    setCurrentQuestionIndex((prevQuestionIndex)=> prevQuestionIndex++);
-    setCurrentQuestion(quizQuestionsData[currentQuestionIndex]);
+    // console.log("clicked")
+    setCurrentQuestionIndex((prevQuestionIndex)=> prevQuestionIndex + 1);
   }
 
   return (
