@@ -1,10 +1,10 @@
 import StartQuizBtn from "./StartQuizBtn"
-function Header(){
+function Header(props){
   return (
     <header className="sticky top-0 w-full bg-white border-b h-16 shadow-sm">
-      <article className="flex items-center justify-around">
+      <article className="flex items-center justify-between px-4">
         <img src="images/vexel-logo.png" className="w-16"/>
-        <StartQuizBtn/>
+        {!props.showStickyCta && <StartQuizBtn/>}
       </article>
     </header>
   )

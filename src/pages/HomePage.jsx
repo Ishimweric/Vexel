@@ -2,15 +2,19 @@ import StartQuizBtn from "../components/StartQuizBtn"
 import { CircleCheck, Clock, Trophy } from "lucide-react"
 import { useEffect, useRef } from "react"
 
-function Home(){
-  const quizBtn = useRef();
-
-  const quizBtnObserver = new IntersectionObserver((entries)=>{
-    const entry = entries[0]
-    console.log(entry.isIntersecting)
-  })
+function Home(props){
+  const quizBtn = useRef(null);
 
   useEffect(()=>{
+    const quizBtnObserver = new IntersectionObserver((entries)=>{
+      const entry = entries[0];
+      const isVisible = entry.isIntersecting;
+      props.onBtnVisibilityChange(isVisible);
+    }, {
+        root: null,
+        rootMargin : "-64px 0px 0px 0px"
+      }
+    )
     quizBtnObserver.observe(quizBtn.current);
     return(
       ()=>{
@@ -19,7 +23,7 @@ function Home(){
         }
       }
     )
-  },[])
+  },[props.onBtnVisibilityChange])
 
   return(
     <main className="min-h-[calc(100vh-8rem)] w-2/3">

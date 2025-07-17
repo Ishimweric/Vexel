@@ -2,13 +2,21 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/HomePage"
+import { useState } from "react"
 function App(){
+  
+  const [isHeroCtaVisible, setIsHeroCtaVisible] = useState(true);
+
+  function handleHeroCtaVisibility(isVisible){
+    setIsHeroCtaVisible(isVisible);
+  }
+
   return(
     <Router>
-      <Header/>
+      <Header showStickyCta = {isHeroCtaVisible}/>
       <div className="flex flex-col items-center">
         <Routes>
-          <Route path="/" element={<Home/>}/>
+          <Route path="/" element={<Home onBtnVisibilityChange = {handleHeroCtaVisibility}/>}/>
         </Routes>
       </div>
       <Footer/>
