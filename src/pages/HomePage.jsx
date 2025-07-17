@@ -1,6 +1,19 @@
 import StartQuizBtn from "../components/StartQuizBtn"
 import { CircleCheck, Clock, Trophy } from "lucide-react"
+import { useEffect, useRef } from "react"
+
 function Home(){
+  const quizBtn = useRef();
+
+  const quizBtnObserver = new IntersectionObserver((entries)=>{
+    const entry = entries[0]
+    console.log(entry.isIntersecting)
+  })
+
+  useEffect(()=>{
+    quizBtnObserver.observe(quizBtn.current);
+  })
+
   return(
     <main className="min-h-[calc(100vh-8rem)] w-2/3">
       <h1 className="my-3 sm:text-6xl text-5xl font-bold text-center bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">Welcome to Quiz Challenge!</h1>
@@ -8,7 +21,7 @@ function Home(){
         Test your knowledge with our exciting quiz! Answer questions across various topics and see how well you can score.
         Are you ready for the challenge?
       </p>
-      <div className="grid place-content-center my-5">
+      <div ref={quizBtn} className="grid place-content-center my-5">
         <StartQuizBtn/>
       </div>
       <section className="flex flex-col gap-10 min-h-[calc(100vh-4rem)] py-5">
