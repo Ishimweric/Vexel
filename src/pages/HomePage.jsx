@@ -12,7 +12,14 @@ function Home(){
 
   useEffect(()=>{
     quizBtnObserver.observe(quizBtn.current);
-  })
+    return(
+      ()=>{
+        if (quizBtn.current){
+          quizBtnObserver.unobserve(quizBtn.current);
+        }
+      }
+    )
+  },[])
 
   return(
     <main className="min-h-[calc(100vh-8rem)] w-2/3">
