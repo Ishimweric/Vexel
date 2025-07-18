@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/HomePage"
 import Quiz from "./pages/QuizPage"
+import Results from "./pages/ResultsPage"
 import { useState } from "react"
 function App(){
   
@@ -20,6 +21,7 @@ function App(){
         <Routes>
           <Route path="/" element={<Home onBtnVisibilityChange = {handleHeroCtaVisibility}/>}/>
           <Route path="/quiz" element={<Quiz/>}/>
+          <Route path="/results" element= {<Results/>}/>
         </Routes>
       </div>
       <Footer/>
