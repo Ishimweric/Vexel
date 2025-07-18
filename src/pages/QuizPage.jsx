@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import quizQuestionsData from "../data/questions.json"
 import ProgressBar from "../components/ProgressBar";
 import Question from "../components/Question";
+import { useNavigate } from "react-router-dom";
 
 function Quiz(){
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion= quizQuestionsData[currentQuestionIndex];
-  const [userAnswers , setUserAnswers] = useState({})
+  const [userAnswers , setUserAnswers] = useState({});
+  const [isQuizFinished, setIsQuizFinished] = useState(false);
 
   const totalQuestions = quizQuestionsData.length;
 
@@ -14,9 +16,25 @@ function Quiz(){
   const answers = currentQuestion.answerOptions;
   const questionId = currentQuestion.id;
 
+  const [score, setScore] = useState(0);
+
+  const navigate = useNavigate();
+
   function updateQuestion(){
-    // console.log("clicked")
-    setCurrentQuestionIndex((prevQuestionIndex)=> prevQuestionIndex + 1);
+    if (currentQuestionIndex < totalQuestions - 1){
+      setCurrentQuestionIndex((prevQuestionIndex)=> prevQuestionIndex + 1);
+    }else{
+      let finalScore = 0;
+      for( let i = 0; i < totalQuestions; i++){
+        let currentAnswerId = `q${i+1}`
+        let currentCorrectAnwer = quizQuestionsData[i].answerOptions.filter((answer)=> answer.isCorrect);
+        if (userAnswers[currentAnswerId] === currentCorrectAnwer[0].id){
+          finalScore++
+        }
+      }
+      setScore(finalScore);
+      setIsQuizFinished(true);
+    }
   }
 
   function handleUserAnswers(selectedAnswerId){
@@ -25,7 +43,12 @@ function Quiz(){
       [questionId] : selectedAnswerId
     }));
   }
-  console.log(userAnswers)
+
+  useEffect(()=>{
+    if(isQuizFinished){
+      navigate("/results", {state: {finalScore: score}});
+    }
+  },[isQuizFinished,score])
 
   return (
     <main className="min-h-[calc(100vh-4rem)] flex justify-center w-full bg-[rgb(226,232,240)]">

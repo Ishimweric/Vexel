@@ -8,7 +8,6 @@ import { useState } from "react"
 function App(){
   
   const [isHeroCtaVisible, setIsHeroCtaVisible] = useState(true);
-  const [quizStatus, setQuizStatus] = useState("idle");
 
   function handleHeroCtaVisibility(isVisible){
     setIsHeroCtaVisible(isVisible);

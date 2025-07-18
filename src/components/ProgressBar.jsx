@@ -1,6 +1,5 @@
 function ProgressBar({currentQuestionIndex, totalQuestions}){
   const currentWidth = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-  console.log(currentWidth)
 
   return(
     <section className="bg-blue-50 w-full rounded-lg h-4 opacity-90">
